@@ -7,6 +7,6 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://colivsync-api.onrender.com/api/:splat"
+  to = "https://fft-capstone-project-colivsync.onrender.com/api/:splat"
   status = 200
   force = true
