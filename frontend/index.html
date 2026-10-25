@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="ColivSync brings residents, property owners, and co-living communities together.">
+  <title>ColivSync — Co-living, in sync</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' };</script>
+  <link rel="stylesheet" href="css/site.css">
+  <script>
+    if (localStorage.getItem('colivsync_theme') === 'dark') {
+      document.documentElement.dataset.theme = 'dark';
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ColivSync home">
+      <span class="brand-symbol" aria-hidden="true">C</span><span>Coliv<span class="brand-accent">Sync</span></span>
+    </a>
+    <nav class="header-actions" aria-label="Main navigation">
+      <button class="icon-button" type="button" data-action="theme" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button>
+      <button class="button button-quiet" type="button" data-action="login">Log in</button>
+      <button class="button button-primary" type="button" data-action="register-choice">Get started</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero page-width">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="status-dot"></span> Housing, community, and care — together</span>
+        <h1>Good living starts with <em>feeling at home.</em></h1>
+        <p>ColivSync brings residents and property owners onto one trusted platform. Explore PGs, hostels, and flats; manage rooms, bookings, rent, and community updates in one place.</p>
+        <div class="hero-actions">
+          <button class="button button-primary button-large" type="button" data-action="register-choice">Create your account <span aria-hidden="true">→</span></button>
+          <button class="button button-outline button-large" type="button" data-action="login">I already have an account</button>
+        </div>
+        <div class="hero-proof">
+          <span><b>✓</b> Room options that update live</span>
+          <span><b>✓</b> One dashboard for your role</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="ColivSync community dashboard preview">
+        <div class="visual-window">
+          <div class="visual-top"><span class="mini-brand"><i></i> ColivSync</span><span class="online"><i></i> Community live</span></div>
+          <div class="visual-heading"><span>YOUR COMMUNITY</span><strong>Live together,<br>in sync.</strong></div>
+          <div class="visual-stats">
+            <div><span>Homes</span><b id="heroProperties">—</b></div>
+            <div><span>Room options</span><b id="heroRooms">—</b></div>
+            <div><span>Open beds</span><b id="heroBeds">—</b></div>
+          </div>
+          <div class="visual-list">
+            <div class="visual-list-icon">⌂</div><div><b>Residents & owners</b><span>Connected by the right place</span></div><span class="visual-arrow">↗</span>
+          </div>
+          <div class="visual-list">
+            <div class="visual-list-icon visual-icon-gold">✳</div><div><b>Community updates</b><span>Useful news, right on time</span></div><span class="visual-arrow">↗</span>
+          </div>
+        </div>
+        <span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="page-width trust-inner">
+        <span class="trust-label">BUILT FOR EVERY PART OF THE COMMUNITY</span>
+        <div class="role-chips"><span>⌂ Residents</span><span>▦ Property owners</span><span>✳ Super admins</span></div>
+      </div>
+    </section>
+
+    <section class="page-width section-block">
+      <div class="section-title">
+        <div><span class="eyebrow">One connected experience</span><h2>Everything your community needs.</h2></div>
+        <p>Every step is powered by the same live property and room data, so the right information reaches the right people.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><span class="feature-icon">⌂</span><span class="feature-kicker">FOR RESIDENTS</span><h3>Find your room. Settle in.</h3><p>Choose your city, property type, sharing style, and an available room. See the monthly rent before you book.</p><button class="text-link" type="button" data-action="register-tenant">Join as a resident <span>→</span></button></article>
+        <article class="feature-card feature-highlight"><span class="feature-icon">▦</span><span class="feature-kicker">FOR PROPERTY OWNERS</span><h3>Your properties, in your hands.</h3><p>Add homes and room options, manage availability, keep track of residents, and send updates to your community.</p><button class="text-link" type="button" data-action="register-owner">Join as an owner <span>→</span></button></article>
+        <article class="feature-card"><span class="feature-icon">✳</span><span class="feature-kicker">FOR SUPER ADMINS</span><h3>A clearer view of the whole picture.</h3><p>Review properties, owners, residents, bookings, and activity across locations from one central dashboard.</p><button class="text-link" type="button" data-action="login">Admin sign in <span>→</span></button></article>
+      </div>
+    </section>
+
+    <section class="page-width pillars-section">
+      <div class="section-title">
+        <div><span class="eyebrow">More than a place to stay</span><h2>Smarter systems for everyday living.</h2></div>
+        <p>Bring the daily details of student life and shared housing together with clear, useful tools.</p>
+      </div>
+      <div class="pillar-grid">
+        <article><span>◔</span><div><b>Category budget caps</b><p>Track food, utilities, rent, and outings with live spend levels and 80% / 100% alerts.</p></div></article>
+        <article><span>↗</span><div><b>UPI transaction parser</b><p>Import sample Google Pay, PhonePe, and Paytm transactions into categorized expenses.</p></div></article>
+        <article><span>⇄</span><div><b>Flatmate bill settlement</b><p>Split household bills and calculate simplified balances from member expenses.</p></div></article>
+        <article><span>☷</span><div><b>Exam crunch mode</b><p>Temporarily reallocate household chores while a flatmate focuses on studies.</p></div></article>
+      </div>
+      <p class="platform-note">Transaction sync uses example data, and payment collection is not configured. No bank connection or payment is processed.</p>
+    </section>
+
+    <section class="how-section">
+      <div class="page-width how-layout">
+        <div><span class="eyebrow">Simple, connected, transparent</span><h2>From choosing a room<br>to feeling at home.</h2><p>ColivSync keeps each step clear for the resident, owner, and the people who support the community.</p></div>
+        <ol class="how-steps">
+          <li><span>01</span><div><b>Choose your community</b><p>Select a location, PG, hostel, or flat, then choose a single or shared room.</p></div></li>
+          <li><span>02</span><div><b>Review rent and book</b><p>See live availability and the monthly rent. Confirm your booking through the project payment flow.</p></div></li>
+          <li><span>03</span><div><b>Stay in the loop</b><p>Open your role-based dashboard for bookings, property management, and community announcements.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="page-width closing-cta">
+      <div><span class="eyebrow">Your community starts here</span><h2>Let’s make living together better.</h2><p>Residents, owners, and community admins — there’s a place for you on ColivSync.</p></div>
+      <button class="button button-light button-large" type="button" data-action="register-choice">Get started <span aria-hidden="true">→</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="page-width footer-inner"><a class="brand" href="index.html"><span class="brand-symbol">C</span><span>Coliv<span class="brand-accent">Sync</span></span></a><span>© <span id="footerYear"></span> ColivSync · Better living, together.</span><span id="apiStatus" class="api-status"><i></i> Connecting to community data</span></div></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header"><div><span class="eyebrow" id="modalEyebrow">COLIVSYNC</span><h2 id="modalTitle"></h2><p id="modalDescription"></p></div><button type="button" class="icon-button close-button" data-action="close-modal" aria-label="Close">×</button></div>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

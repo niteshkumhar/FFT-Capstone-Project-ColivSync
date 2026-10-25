@@ -1,0 +1,12 @@
+# Netlify hosts ONLY the static frontend (HTML/CSS/JS).
+# Every /api/* request is proxied to the Node.js + SQLite backend (hosted on Render).
+# >>> Replace the URL below with YOUR backend's real URL after deploying it. <<<
+
+[build]
+  publish = "frontend"
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://colivsync-api.onrender.com/api/:splat"
+  status = 200
+  force = true

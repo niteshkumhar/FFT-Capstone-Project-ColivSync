@@ -1,0 +1,28 @@
+# Render Blueprint for the ColivSync backend (Express + SQLite).
+# Free plan = demo only: Render's free filesystem is ephemeral, so the SQLite
+# database resets on every redeploy/restart/spin-down.
+# For data that survives, use a paid plan + persistent disk (see commented lines).
+services:
+  - type: web
+    name: colivsync-api
+    runtime: node
+    plan: free            # change to "starter" when using a persistent disk
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: COLIVSYNC_ADMIN_PASSWORD
+        sync: false       # you type this value in the Render dashboard
+      # --- Persistent storage (paid plan only) ---
+      # - key: COLIVSYNC_DB_PATH
+      #   value: /var/data/colivsync.db
+      # - key: COLIVSYNC_UPLOAD_DIR
+      #   value: /var/data/uploads
+    # disk:
+    #   name: colivsync-data
+    #   mountPath: /var/data
+    #   sizeGB: 1

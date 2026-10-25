@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# local database & uploads (never commit user data)
+backend/colivsync.db*
+backend/uploads/
+*.db
+*.db-shm
+*.db-wal
+
+# environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
